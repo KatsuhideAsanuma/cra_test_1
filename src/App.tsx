@@ -26,6 +26,7 @@ function App() {
       e.preventDefault();
       fetch(`https://api.weatherapi.com/v1/current.json?key=c835462ea81d49659ec44305232401&q=${city}&aqi=no`)
       .then(res=>res.json())
+
       .then(data=>{
         setResult({
           country:data.location.country,
@@ -35,6 +36,11 @@ function App() {
           icon:data.current.condition.icon
         })
       })
+      .catch(er=>{
+        alert("input correct city name");
+        console.log(er)
+      })
+      
   }
   return (
     <div className="wrapper">
