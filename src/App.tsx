@@ -35,18 +35,20 @@ function App() {
           conditionText:data.current.condition.text,
           icon:data.current.condition.icon
         })
+        setCity("")
       })
       .catch(er=>{
         alert("input correct city name");
         console.log(er)
       })
+
       
   }
   return (
     <div className="wrapper">
       <div className="container">
       <Title cityName={city}/>
-      <Form setCity={setCity} getWeather={getWeather}/>
+      <Form city={city} setCity={setCity} getWeather={getWeather}/>
       <Results results={result}/>
       </div>
     </div>

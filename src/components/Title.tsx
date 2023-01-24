@@ -2,8 +2,9 @@ type TitlePropsType={
     cityName:string
 }
 const Title=(props:TitlePropsType)=>{
+    console.log(props.cityName)
     return (
-        <h1>React World Weather in {props.cityName}</h1>
+        <h1>World Weather</h1>        
     )
 };
 
