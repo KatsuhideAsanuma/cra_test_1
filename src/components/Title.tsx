@@ -1,6 +1,9 @@
-const Title=(props:any)=>{
+type TitlePropsType={
+    cityName:string
+}
+const Title=({cityName}:TitlePropsType)=>{
     return (
-        <h1>React World Weather in {props.cityName}</h1>
+        <h1>React World Weather in {cityName}</h1>
     )
 };
 
